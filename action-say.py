@@ -8,7 +8,7 @@ MQTT_ADDR = "{}:{}".format(MQTT_IP_ADDR, str(MQTT_PORT))
 def intent_received(hermes, intent_message):
     sentence = 'OK, I say '
 
-    if intent_message.intent.intent_name != 'say':
+    if intent_message.intent.intent_name != 'kblachowicz:say':
         return
 
     word = intent_message.slots.word.first()
